@@ -21,7 +21,7 @@ $(document).ready(function() {
 function constructHTTPRequest(userinput) {
     var date = new Date().valueOf();
     var today = Math.round(date/1000);
-    url = apicall + zipcode+ "&start_date="+today+"&sort_on=time_start&sort_by=asc&radius=1600&limit=10";
+    url = apicall + zipcode+ "&start_date="+today+"&sort_on=time_start&sort_by=asc&radius=100&limit=10";
     HTTPRequest = {
         "async": true,
         "crossDomain": true,
