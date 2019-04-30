@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <title>Events Near Me</title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top bg-light ">
+        <div class="container-fluid nav-wrapper">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed navbar-search" data-toggle="collapse" data-target="#search-bar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="navbar-brand">
+                    Events near me
+                </p></div></div>
+        <div class="collapse navbar-collapse" id="search-bar">
+                <form onload="onload();" class="form-inline navbar-form navbar-right" role="search">
+                    <div class="form-group location-wrapper">
+                        <input type="text" name="enter" class="enter form-control mr-sm-2" value="" id="location_input" placeholder="Enter your location (neighborhood or zipcode)"/>
+                        <input type="button" class="btn btn-default" value="Submit" id="getZip"/>
+                    </div>
+                </form>
+        </div>
+    </nav>
+
+    <div class="container" >
+        <!--form onload="onload();">
+            <div class="form-group">
+                <input type="text" name="enter" class="enter form-control" value="" id="location_input" placeholder="Enter your location (neighbor hood or zipcode)"/>
+                <input type="button" class="btn btn-default" value="Submit" id="getZip"/>
+            </div>
+        </form-->
+        <div>
+            <ul class="list-group" id="eventList" ></ul>
+        </div>
+    </div>
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="yelp.js"></script>
+
+</body>
+</html>
