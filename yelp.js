@@ -21,7 +21,7 @@ $(document).ready(function() {
 function constructHTTPRequest(userinput) {
     var date = new Date().valueOf();
     var today = Math.round(date/1000);
-    url = apicall + zipcode+ "&start_date="+today+"&sort_on=time_start&sort_by=asc&radius=100&limit=10";
+    url = apicall + zipcode+ "&start_date="+today+"&sort_on=time_start&sort_by=asc&radius=50&limit=10";
     HTTPRequest = {
         "async": true,
         "crossDomain": true,
@@ -56,9 +56,10 @@ function appendResults(event) {
             eventCost = event[i].cost;
         }
         cost ="<li class='list-group-item'>Cost: $" + eventCost +"</li>";
-        var time ="<li class='list-group-item'>Time: " + event[i].time_start.split('T')[0] +"</li>";
+        var time ="<li class='list-group-item'>Time: " + event[i].time_start.split('T')[0] +" to "+event[i].time_end.split('T')[0]+"</li>";
+        var keyPartial = "AIzaSyCTyDHuF9EJa51vkw";
         var fullAddress = event[i].location.display_address;
-        var src= "src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCTyDHuF9EJa51vkwNqAkwnWh4ApWqvb0o &q=" +fullAddress+"'"
+        var src= "src='https://www.google.com/maps/embed/v1/place?key="+keyPartial+"NqAkwnWh4ApWqvb0o &q=" +fullAddress+"'"
 
         var map = "<li class='collapse' id='collapse-"+i+"'><iframe height = '200' width='100%' frameborder='0' style='border:0'" + src+"allowfullscreen>" +
             "</iframe></li>"
